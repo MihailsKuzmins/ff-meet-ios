@@ -35,6 +35,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F998DD2221EC42E00992DFF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F9EFD69221EB272003F488B /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		3F9EFD5B221EB271003F488B = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +62,8 @@
 		3F9EFD66221EB272003F488B /* FreestyleMeetApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F998DD2221EC42E00992DFF /* Controllers */,
 				3F9EFD67221EB272003F488B /* AppDelegate.swift */,
-				3F9EFD69221EB272003F488B /* ViewController.swift */,
 				3F9EFD6B221EB272003F488B /* Main.storyboard */,
 				3F9EFD6E221EB272003F488B /* Assets.xcassets */,
 				3F9EFD70221EB272003F488B /* LaunchScreen.storyboard */,
