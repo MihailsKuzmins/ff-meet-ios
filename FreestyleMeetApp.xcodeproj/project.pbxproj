@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3F7B8CA2221ED0A300A0CFAC /* UiViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CA1221ED0A300A0CFAC /* UiViewExtensions.swift */; };
+		3F7B8CA7221ED6A700A0CFAC /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CA6221ED6A700A0CFAC /* FirebaseHandler.swift */; };
+		3F7B8CA9221EDD2400A0CFAC /* UiViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CA8221EDD2400A0CFAC /* UiViewControllerExtensions.swift */; };
+		3F7B8CB1221EE39D00A0CFAC /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CB0221EE39C00A0CFAC /* Strings.swift */; };
 		3F998DD4221EC52000992DFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F998DD3221EC52000992DFF /* GoogleService-Info.plist */; };
 		3F9EFD68221EB272003F488B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EFD67221EB272003F488B /* AppDelegate.swift */; };
 		3F9EFD6A221EB272003F488B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EFD69221EB272003F488B /* ViewController.swift */; };
@@ -21,6 +24,10 @@
 		072580F6C40E64C005A2679A /* Pods-FreestyleMeetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreestyleMeetApp.debug.xcconfig"; path = "Target Support Files/Pods-FreestyleMeetApp/Pods-FreestyleMeetApp.debug.xcconfig"; sourceTree = "<group>"; };
 		0C092F982255BAA6074B3C55 /* Pods_FreestyleMeetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreestyleMeetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7B8CA1221ED0A300A0CFAC /* UiViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewExtensions.swift; sourceTree = "<group>"; };
+		3F7B8CA6221ED6A700A0CFAC /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHandler.swift; sourceTree = "<group>"; };
+		3F7B8CA8221EDD2400A0CFAC /* UiViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewControllerExtensions.swift; sourceTree = "<group>"; };
+		3F7B8CAB221EE1D500A0CFAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		3F7B8CB0221EE39C00A0CFAC /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		3F998DD3221EC52000992DFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F9EFD64221EB272003F488B /* FreestyleMeetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreestyleMeetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9EFD67221EB272003F488B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,8 +63,26 @@
 			isa = PBXGroup;
 			children = (
 				3F7B8CA1221ED0A300A0CFAC /* UiViewExtensions.swift */,
+				3F7B8CA8221EDD2400A0CFAC /* UiViewControllerExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3F7B8CA5221ED68900A0CFAC /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				3F7B8CA6221ED6A700A0CFAC /* FirebaseHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		3F7B8CAF221EE38000A0CFAC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F7B8CB0221EE39C00A0CFAC /* Strings.swift */,
+			);
+			name = Resources;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		3F998DD2221EC42E00992DFF /* Controllers */ = {
@@ -100,7 +125,9 @@
 			children = (
 				3F998DD2221EC42E00992DFF /* Controllers */,
 				3F7B8CA0221ED08100A0CFAC /* Extensions */,
+				3F7B8CA5221ED68900A0CFAC /* Handlers */,
 				3F998DD5221EC76400992DFF /* Storyboards */,
+				3F7B8CAF221EE38000A0CFAC /* Resources */,
 				3F998DD3221EC52000992DFF /* GoogleService-Info.plist */,
 				3F9EFD67221EB272003F488B /* AppDelegate.swift */,
 				3F9EFD6E221EB272003F488B /* Assets.xcassets */,
@@ -250,8 +277,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7B8CA2221ED0A300A0CFAC /* UiViewExtensions.swift in Sources */,
+				3F7B8CA9221EDD2400A0CFAC /* UiViewControllerExtensions.swift in Sources */,
 				3F9EFD6A221EB272003F488B /* ViewController.swift in Sources */,
 				3F9EFD68221EB272003F488B /* AppDelegate.swift in Sources */,
+				3F7B8CB1221EE39D00A0CFAC /* Strings.swift in Sources */,
+				3F7B8CA7221ED6A700A0CFAC /* FirebaseHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +292,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3F9EFD6C221EB272003F488B /* Base */,
+				3F7B8CAB221EE1D500A0CFAC /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

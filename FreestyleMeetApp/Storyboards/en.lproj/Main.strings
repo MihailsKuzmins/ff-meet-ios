@@ -1,0 +1,9 @@
+
+/* Class = "UITextField"; placeholder = "Eメール"; ObjectID = "4Rb-Ph-YhP"; */
+"4Rb-Ph-YhP.placeholder" = "Eメール";
+
+/* Class = "UIButton"; normalTitle = "サインイン"; ObjectID = "cF0-kX-7yY"; */
+"cF0-kX-7yY.normalTitle" = "サインイン";
+
+/* Class = "UITextField"; placeholder = "パスワード"; ObjectID = "hFv-ct-Abz"; */
+"hFv-ct-Abz.placeholder" = "パスワード";

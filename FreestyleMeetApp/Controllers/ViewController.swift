@@ -10,6 +10,7 @@ class ViewController: UIViewController {
         
         initItself()
         initLoginView()
+        initTextFields()
     }
     
     func initItself() {
@@ -23,6 +24,27 @@ class ViewController: UIViewController {
         layer.borderWidth = 1
         layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         layer.cornerRadius = loginView.frame.size.width / 10
+    }
+    
+    func initTextFields() {
+        loginTextField.text = "ibuki.yoshida"
+        passwordTextField.text = "password123"
+    }
+    
+    @IBAction func signInButtonAction(_ sender: UIButton) {
+        guard var login = loginTextField.text, let password = passwordTextField.text,
+            !login.isEmpty, !password.isEmpty else {
+            self.alert(title: Strings.error, message: Strings.noLoginOrPassword)
+            return
+        }
+        
+        login += "@google.jp"
+        
+        FirebaseHandler.getInstance().authenticate(eMail: login, password: password, onSuccessCallback: {
+            print("Success")
+        }, onErrorCallback: {
+            self.alert(title: Strings.error, message: Strings.cannotLogin)
+        })
     }
 }
 

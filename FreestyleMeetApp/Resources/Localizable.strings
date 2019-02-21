@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  FreestyleMeetApp
+
+  Created by Student on 21/02/2019.
+  Copyright © 2019 kuzmimih. All rights reserved.
+*/
+"general_error" = "エラー";
+"general_cannotLogin" = "ログインに失敗しました";
