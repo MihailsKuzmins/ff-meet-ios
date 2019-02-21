@@ -1,4 +1,5 @@
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var loginView: UIView!
@@ -41,12 +42,27 @@ class ViewController: UIViewController {
         login += "@google.jp"
         
         FirebaseHandler.getInstance().authenticate(eMail: login, password: password, onSuccessCallback: {
-            let storyboard = UIStoryboard(name: "AppStoryboard", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "MeetListViewController")
-            self.present(vc, animated: true, completion: nil)
+            let storyboard = UIStoryboard(name: CoreConstants.Storyboards.appStoryboard, bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: CoreConstants.ViewControllers.meetList) as! MeetListViewController
             
+            self.fetchMeets(vc)
         }, onErrorCallback: {
             self.alert(title: Strings.error, message: Strings.cannotLogin)
+        })
+    }
+    
+    private func fetchMeets(_ vc: MeetListViewController) {
+        FirebaseHandler.getInstance().getMeets(createItem: { x -> MeetListModel in
+            let name = x[CoreConstants.DbKeys.meetName] as! String
+            let locationName = x[CoreConstants.DbKeys.meetLocationName] as! String
+            let date = x[CoreConstants.DbKeys.meetDate] as! String
+            
+            return MeetListModel(name: name, locationName: locationName, date: date)
+        }, onSuccessCallback: { x in
+            vc.meets = x
+            self.present(vc, animated: true, completion: nil)
+        }, onErrorCallback: {
+            self.alert(title: Strings.error, message: Strings.accessDenied)
         })
     }
 }

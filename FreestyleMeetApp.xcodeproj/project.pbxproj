@@ -14,6 +14,9 @@
 		3F7B8CB3221EE5B400A0CFAC /* AppStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B8CB2221EE5B400A0CFAC /* AppStoryboard.storyboard */; };
 		3F7B8CB5221EE76500A0CFAC /* MeetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CB4221EE76500A0CFAC /* MeetListViewController.swift */; };
 		3F7B8CB7221EE88800A0CFAC /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CB6221EE88800A0CFAC /* SegueHandler.swift */; };
+		3F7B8CBB221EEB4D00A0CFAC /* CoreConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CBA221EEB4D00A0CFAC /* CoreConstants.swift */; };
+		3F7B8CBE221EEC9800A0CFAC /* MeetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CBD221EEC9800A0CFAC /* MeetTableViewCell.swift */; };
+		3F7B8CC1221EF9F900A0CFAC /* MeetListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CC0221EF9F900A0CFAC /* MeetListModel.swift */; };
 		3F998DD4221EC52000992DFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F998DD3221EC52000992DFF /* GoogleService-Info.plist */; };
 		3F9EFD68221EB272003F488B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EFD67221EB272003F488B /* AppDelegate.swift */; };
 		3F9EFD6A221EB272003F488B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EFD69221EB272003F488B /* ViewController.swift */; };
@@ -34,6 +37,9 @@
 		3F7B8CB2221EE5B400A0CFAC /* AppStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppStoryboard.storyboard; sourceTree = "<group>"; };
 		3F7B8CB4221EE76500A0CFAC /* MeetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetListViewController.swift; sourceTree = "<group>"; };
 		3F7B8CB6221EE88800A0CFAC /* SegueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
+		3F7B8CBA221EEB4D00A0CFAC /* CoreConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreConstants.swift; sourceTree = "<group>"; };
+		3F7B8CBD221EEC9800A0CFAC /* MeetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetTableViewCell.swift; sourceTree = "<group>"; };
+		3F7B8CC0221EF9F900A0CFAC /* MeetListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetListModel.swift; sourceTree = "<group>"; };
 		3F998DD3221EC52000992DFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F9EFD64221EB272003F488B /* FreestyleMeetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreestyleMeetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9EFD67221EB272003F488B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,9 +93,26 @@
 			isa = PBXGroup;
 			children = (
 				3F7B8CB0221EE39C00A0CFAC /* Strings.swift */,
+				3F7B8CBA221EEB4D00A0CFAC /* CoreConstants.swift */,
 			);
 			name = Resources;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		3F7B8CBC221EEC6700A0CFAC /* Ui */ = {
+			isa = PBXGroup;
+			children = (
+				3F7B8CBD221EEC9800A0CFAC /* MeetTableViewCell.swift */,
+			);
+			path = Ui;
+			sourceTree = "<group>";
+		};
+		3F7B8CBF221EF9C400A0CFAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3F7B8CC0221EF9F900A0CFAC /* MeetListModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3F998DD2221EC42E00992DFF /* Controllers */ = {
@@ -135,8 +158,10 @@
 				3F998DD2221EC42E00992DFF /* Controllers */,
 				3F7B8CA0221ED08100A0CFAC /* Extensions */,
 				3F7B8CA5221ED68900A0CFAC /* Handlers */,
-				3F998DD5221EC76400992DFF /* Storyboards */,
+				3F7B8CBF221EF9C400A0CFAC /* Models */,
 				3F7B8CAF221EE38000A0CFAC /* Resources */,
+				3F998DD5221EC76400992DFF /* Storyboards */,
+				3F7B8CBC221EEC6700A0CFAC /* Ui */,
 				3F998DD3221EC52000992DFF /* GoogleService-Info.plist */,
 				3F9EFD67221EB272003F488B /* AppDelegate.swift */,
 				3F9EFD6E221EB272003F488B /* Assets.xcassets */,
@@ -289,8 +314,11 @@
 				3F7B8CB5221EE76500A0CFAC /* MeetListViewController.swift in Sources */,
 				3F7B8CA2221ED0A300A0CFAC /* UiViewExtensions.swift in Sources */,
 				3F7B8CA9221EDD2400A0CFAC /* UiViewControllerExtensions.swift in Sources */,
+				3F7B8CBB221EEB4D00A0CFAC /* CoreConstants.swift in Sources */,
 				3F9EFD6A221EB272003F488B /* ViewController.swift in Sources */,
+				3F7B8CC1221EF9F900A0CFAC /* MeetListModel.swift in Sources */,
 				3F7B8CB7221EE88800A0CFAC /* SegueHandler.swift in Sources */,
+				3F7B8CBE221EEC9800A0CFAC /* MeetTableViewCell.swift in Sources */,
 				3F9EFD68221EB272003F488B /* AppDelegate.swift in Sources */,
 				3F7B8CB1221EE39D00A0CFAC /* Strings.swift in Sources */,
 				3F7B8CA7221ED6A700A0CFAC /* FirebaseHandler.swift in Sources */,

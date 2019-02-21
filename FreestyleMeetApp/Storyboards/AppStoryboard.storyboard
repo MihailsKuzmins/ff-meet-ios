@@ -17,13 +17,57 @@
                     <view key="view" contentMode="scaleToFill" id="gKI-E8-bxc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.89977566009999999" green="1" blue="0.89500583879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zsk-hu-z1x">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="meetTableViewCell" rowHeight="100" id="cbR-9P-2rZ" customClass="MeetTableViewCell" customModule="FreestyleMeetApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cbR-9P-2rZ" id="smM-y5-zzE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.666666666666671"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fm-fW-xvU">
+                                                    <rect key="frame" x="15" y="10" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUA-OK-9TV">
+                                                    <rect key="frame" x="15" y="39" width="345" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateTimeLabel" destination="TUA-OK-9TV" id="Q5L-9v-5u7"/>
+                                            <outlet property="nameLabel" destination="8fm-fW-xvU" id="Weh-jl-8Td"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Zsk-hu-z1x" firstAttribute="leading" secondItem="nGV-Kk-YTO" secondAttribute="leading" id="i9C-wx-W2b"/>
+                            <constraint firstItem="nGV-Kk-YTO" firstAttribute="bottom" secondItem="Zsk-hu-z1x" secondAttribute="bottom" id="onE-D3-iOg"/>
+                            <constraint firstItem="nGV-Kk-YTO" firstAttribute="trailing" secondItem="Zsk-hu-z1x" secondAttribute="trailing" id="uao-KB-gWG"/>
+                            <constraint firstItem="Zsk-hu-z1x" firstAttribute="top" secondItem="nGV-Kk-YTO" secondAttribute="top" id="zHQ-7u-eOv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nGV-Kk-YTO"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Zsk-hu-z1x" id="u66-41-FnB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QxL-tm-5Jm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89" y="91"/>
+            <point key="canvasLocation" x="88.799999999999997" y="90.886699507389167"/>
         </scene>
     </scenes>
 </document>
