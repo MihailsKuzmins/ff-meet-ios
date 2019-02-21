@@ -11,6 +11,9 @@
 		3F7B8CA7221ED6A700A0CFAC /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CA6221ED6A700A0CFAC /* FirebaseHandler.swift */; };
 		3F7B8CA9221EDD2400A0CFAC /* UiViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CA8221EDD2400A0CFAC /* UiViewControllerExtensions.swift */; };
 		3F7B8CB1221EE39D00A0CFAC /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CB0221EE39C00A0CFAC /* Strings.swift */; };
+		3F7B8CB3221EE5B400A0CFAC /* AppStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7B8CB2221EE5B400A0CFAC /* AppStoryboard.storyboard */; };
+		3F7B8CB5221EE76500A0CFAC /* MeetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CB4221EE76500A0CFAC /* MeetListViewController.swift */; };
+		3F7B8CB7221EE88800A0CFAC /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CB6221EE88800A0CFAC /* SegueHandler.swift */; };
 		3F998DD4221EC52000992DFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F998DD3221EC52000992DFF /* GoogleService-Info.plist */; };
 		3F9EFD68221EB272003F488B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EFD67221EB272003F488B /* AppDelegate.swift */; };
 		3F9EFD6A221EB272003F488B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EFD69221EB272003F488B /* ViewController.swift */; };
@@ -28,6 +31,9 @@
 		3F7B8CA8221EDD2400A0CFAC /* UiViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewControllerExtensions.swift; sourceTree = "<group>"; };
 		3F7B8CAB221EE1D500A0CFAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		3F7B8CB0221EE39C00A0CFAC /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		3F7B8CB2221EE5B400A0CFAC /* AppStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppStoryboard.storyboard; sourceTree = "<group>"; };
+		3F7B8CB4221EE76500A0CFAC /* MeetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetListViewController.swift; sourceTree = "<group>"; };
+		3F7B8CB6221EE88800A0CFAC /* SegueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
 		3F998DD3221EC52000992DFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F9EFD64221EB272003F488B /* FreestyleMeetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreestyleMeetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9EFD67221EB272003F488B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				3F7B8CA6221ED6A700A0CFAC /* FirebaseHandler.swift */,
+				3F7B8CB6221EE88800A0CFAC /* SegueHandler.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -89,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				3F9EFD69221EB272003F488B /* ViewController.swift */,
+				3F7B8CB4221EE76500A0CFAC /* MeetListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -98,6 +106,7 @@
 			children = (
 				3F9EFD70221EB272003F488B /* LaunchScreen.storyboard */,
 				3F9EFD6B221EB272003F488B /* Main.storyboard */,
+				3F7B8CB2221EE5B400A0CFAC /* AppStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -205,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7B8CB3221EE5B400A0CFAC /* AppStoryboard.storyboard in Resources */,
 				3F9EFD72221EB272003F488B /* LaunchScreen.storyboard in Resources */,
 				3F998DD4221EC52000992DFF /* GoogleService-Info.plist in Resources */,
 				3F9EFD6F221EB272003F488B /* Assets.xcassets in Resources */,
@@ -276,9 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7B8CB5221EE76500A0CFAC /* MeetListViewController.swift in Sources */,
 				3F7B8CA2221ED0A300A0CFAC /* UiViewExtensions.swift in Sources */,
 				3F7B8CA9221EDD2400A0CFAC /* UiViewControllerExtensions.swift in Sources */,
 				3F9EFD6A221EB272003F488B /* ViewController.swift in Sources */,
+				3F7B8CB7221EE88800A0CFAC /* SegueHandler.swift in Sources */,
 				3F9EFD68221EB272003F488B /* AppDelegate.swift in Sources */,
 				3F7B8CB1221EE39D00A0CFAC /* Strings.swift in Sources */,
 				3F7B8CA7221ED6A700A0CFAC /* FirebaseHandler.swift in Sources */,

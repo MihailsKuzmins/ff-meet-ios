@@ -41,7 +41,10 @@ class ViewController: UIViewController {
         login += "@google.jp"
         
         FirebaseHandler.getInstance().authenticate(eMail: login, password: password, onSuccessCallback: {
-            print("Success")
+            let storyboard = UIStoryboard(name: "AppStoryboard", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MeetListViewController")
+            self.present(vc, animated: true, completion: nil)
+            
         }, onErrorCallback: {
             self.alert(title: Strings.error, message: Strings.cannotLogin)
         })
