@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 class CoreConstants {
     class Storyboards {
@@ -20,5 +21,9 @@ class CoreConstants {
         public static let meetLocationName = "locationName"
         public static let meetLongitude = "longitude"
         public static let meetName = "name"
+    }
+    
+    class Ui {
+        public static let meetCellHeight: CGFloat = 100
     }
 }
