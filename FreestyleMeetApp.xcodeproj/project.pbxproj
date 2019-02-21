@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F7B8CA2221ED0A300A0CFAC /* UiViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7B8CA1221ED0A300A0CFAC /* UiViewExtensions.swift */; };
 		3F998DD4221EC52000992DFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F998DD3221EC52000992DFF /* GoogleService-Info.plist */; };
 		3F9EFD68221EB272003F488B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EFD67221EB272003F488B /* AppDelegate.swift */; };
 		3F9EFD6A221EB272003F488B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EFD69221EB272003F488B /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		072580F6C40E64C005A2679A /* Pods-FreestyleMeetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreestyleMeetApp.debug.xcconfig"; path = "Target Support Files/Pods-FreestyleMeetApp/Pods-FreestyleMeetApp.debug.xcconfig"; sourceTree = "<group>"; };
 		0C092F982255BAA6074B3C55 /* Pods_FreestyleMeetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreestyleMeetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F7B8CA1221ED0A300A0CFAC /* UiViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewExtensions.swift; sourceTree = "<group>"; };
 		3F998DD3221EC52000992DFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F9EFD64221EB272003F488B /* FreestyleMeetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreestyleMeetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9EFD67221EB272003F488B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,12 +52,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3F7B8CA0221ED08100A0CFAC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3F7B8CA1221ED0A300A0CFAC /* UiViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3F998DD2221EC42E00992DFF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				3F9EFD69221EB272003F488B /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3F998DD5221EC76400992DFF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3F9EFD70221EB272003F488B /* LaunchScreen.storyboard */,
+				3F9EFD6B221EB272003F488B /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		3F9EFD5B221EB271003F488B = {
@@ -79,12 +98,12 @@
 		3F9EFD66221EB272003F488B /* FreestyleMeetApp */ = {
 			isa = PBXGroup;
 			children = (
-				3F998DD3221EC52000992DFF /* GoogleService-Info.plist */,
 				3F998DD2221EC42E00992DFF /* Controllers */,
+				3F7B8CA0221ED08100A0CFAC /* Extensions */,
+				3F998DD5221EC76400992DFF /* Storyboards */,
+				3F998DD3221EC52000992DFF /* GoogleService-Info.plist */,
 				3F9EFD67221EB272003F488B /* AppDelegate.swift */,
-				3F9EFD6B221EB272003F488B /* Main.storyboard */,
 				3F9EFD6E221EB272003F488B /* Assets.xcassets */,
-				3F9EFD70221EB272003F488B /* LaunchScreen.storyboard */,
 				3F9EFD73221EB272003F488B /* Info.plist */,
 			);
 			path = FreestyleMeetApp;
@@ -96,7 +115,6 @@
 				072580F6C40E64C005A2679A /* Pods-FreestyleMeetApp.debug.xcconfig */,
 				48545B37B3F261A68D78F83A /* Pods-FreestyleMeetApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -231,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7B8CA2221ED0A300A0CFAC /* UiViewExtensions.swift in Sources */,
 				3F9EFD6A221EB272003F488B /* ViewController.swift in Sources */,
 				3F9EFD68221EB272003F488B /* AppDelegate.swift in Sources */,
 			);
