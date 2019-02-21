@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  FreestyleMeetApp
-//
-//  Created by Student on 21/02/2019.
-//  Copyright © 2019 kuzmimih. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
