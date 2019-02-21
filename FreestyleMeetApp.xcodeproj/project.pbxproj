@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F998DD4221EC52000992DFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F998DD3221EC52000992DFF /* GoogleService-Info.plist */; };
 		3F9EFD68221EB272003F488B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EFD67221EB272003F488B /* AppDelegate.swift */; };
 		3F9EFD6A221EB272003F488B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EFD69221EB272003F488B /* ViewController.swift */; };
 		3F9EFD6D221EB272003F488B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9EFD6B221EB272003F488B /* Main.storyboard */; };
 		3F9EFD6F221EB272003F488B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9EFD6E221EB272003F488B /* Assets.xcassets */; };
 		3F9EFD72221EB272003F488B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9EFD70221EB272003F488B /* LaunchScreen.storyboard */; };
+		ACE330354D86D7456B282D5C /* Pods_FreestyleMeetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C092F982255BAA6074B3C55 /* Pods_FreestyleMeetApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		072580F6C40E64C005A2679A /* Pods-FreestyleMeetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreestyleMeetApp.debug.xcconfig"; path = "Target Support Files/Pods-FreestyleMeetApp/Pods-FreestyleMeetApp.debug.xcconfig"; sourceTree = "<group>"; };
+		0C092F982255BAA6074B3C55 /* Pods_FreestyleMeetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreestyleMeetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F998DD3221EC52000992DFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F9EFD64221EB272003F488B /* FreestyleMeetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreestyleMeetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9EFD67221EB272003F488B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F9EFD69221EB272003F488B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		3F9EFD6E221EB272003F488B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F9EFD71221EB272003F488B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F9EFD73221EB272003F488B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48545B37B3F261A68D78F83A /* Pods-FreestyleMeetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreestyleMeetApp.release.xcconfig"; path = "Target Support Files/Pods-FreestyleMeetApp/Pods-FreestyleMeetApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,12 +35,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE330354D86D7456B282D5C /* Pods_FreestyleMeetApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		311E8198A2DEF018F5230ECD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C092F982255BAA6074B3C55 /* Pods_FreestyleMeetApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3F998DD2221EC42E00992DFF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -48,6 +63,8 @@
 			children = (
 				3F9EFD66221EB272003F488B /* FreestyleMeetApp */,
 				3F9EFD65221EB272003F488B /* Products */,
+				FB62633CDE4CF2CA2C226D2E /* Pods */,
+				311E8198A2DEF018F5230ECD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +79,7 @@
 		3F9EFD66221EB272003F488B /* FreestyleMeetApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F998DD3221EC52000992DFF /* GoogleService-Info.plist */,
 				3F998DD2221EC42E00992DFF /* Controllers */,
 				3F9EFD67221EB272003F488B /* AppDelegate.swift */,
 				3F9EFD6B221EB272003F488B /* Main.storyboard */,
@@ -72,6 +90,16 @@
 			path = FreestyleMeetApp;
 			sourceTree = "<group>";
 		};
+		FB62633CDE4CF2CA2C226D2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				072580F6C40E64C005A2679A /* Pods-FreestyleMeetApp.debug.xcconfig */,
+				48545B37B3F261A68D78F83A /* Pods-FreestyleMeetApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F9EFD76221EB272003F488B /* Build configuration list for PBXNativeTarget "FreestyleMeetApp" */;
 			buildPhases = (
+				9270CDAAFCD135A43831469E /* [CP] Check Pods Manifest.lock */,
 				3F9EFD60221EB271003F488B /* Sources */,
 				3F9EFD61221EB271003F488B /* Frameworks */,
 				3F9EFD62221EB271003F488B /* Resources */,
+				827139955C5052C8455CB15F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,12 +161,70 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F9EFD72221EB272003F488B /* LaunchScreen.storyboard in Resources */,
+				3F998DD4221EC52000992DFF /* GoogleService-Info.plist in Resources */,
 				3F9EFD6F221EB272003F488B /* Assets.xcassets in Resources */,
 				3F9EFD6D221EB272003F488B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		827139955C5052C8455CB15F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FreestyleMeetApp/Pods-FreestyleMeetApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FreestyleMeetApp/Pods-FreestyleMeetApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9270CDAAFCD135A43831469E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FreestyleMeetApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F9EFD60221EB271003F488B /* Sources */ = {
@@ -288,6 +376,7 @@
 		};
 		3F9EFD77221EB272003F488B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 072580F6C40E64C005A2679A /* Pods-FreestyleMeetApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,6 +394,7 @@
 		};
 		3F9EFD78221EB272003F488B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48545B37B3F261A68D78F83A /* Pods-FreestyleMeetApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

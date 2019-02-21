@@ -1,0 +1,6 @@
+framework module Pods_FreestyleMeetApp {
+  umbrella header "Pods-FreestyleMeetApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
