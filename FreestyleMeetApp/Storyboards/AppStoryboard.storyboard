@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="1031.2" y="90.886699507389167"/>
         </scene>
-        <!--Meet Read Detail View Controller-->
+        <!--Meet Detail Read View Controller-->
         <scene sceneID="DCI-tF-eia">
             <objects>
-                <viewController id="tTs-Dy-gfj" customClass="MeetReadDetailViewController" customModule="FreestyleMeetApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tTs-Dy-gfj" customClass="MeetDetailReadViewController" customModule="FreestyleMeetApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hxS-1v-Adz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
