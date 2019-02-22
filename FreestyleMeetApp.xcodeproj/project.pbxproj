@@ -128,10 +128,8 @@
 		3F998DD2221EC42E00992DFF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3FEC140B221FE6C800220D42 /* NavigationController */,
-				3F9EFD69221EB272003F488B /* ViewController.swift */,
-				3FEC1411221FF36D00220D42 /* MeetReadDetailViewController.swift */,
-				3F7B8CB4221EE76500A0CFAC /* MeetListViewController.swift */,
+				3FEC141922200A7700220D42 /* ViewControllers */,
+				3FEC140B221FE6C800220D42 /* NavigationControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,12 +180,22 @@
 			path = FreestyleMeetApp;
 			sourceTree = "<group>";
 		};
-		3FEC140B221FE6C800220D42 /* NavigationController */ = {
+		3FEC140B221FE6C800220D42 /* NavigationControllers */ = {
 			isa = PBXGroup;
 			children = (
 				3FEC140E221FE7A000220D42 /* AppStoryboardNavigationController.swift */,
 			);
-			path = NavigationController;
+			path = NavigationControllers;
+			sourceTree = "<group>";
+		};
+		3FEC141922200A7700220D42 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F7B8CB4221EE76500A0CFAC /* MeetListViewController.swift */,
+				3FEC1411221FF36D00220D42 /* MeetReadDetailViewController.swift */,
+				3F9EFD69221EB272003F488B /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FB62633CDE4CF2CA2C226D2E /* Pods */ = {
