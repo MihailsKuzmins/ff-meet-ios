@@ -12,5 +12,9 @@ class Strings {
     public static let createNewMeet = "新しい出会いを追加"
     public static let save = "保存"
     public static let meet = "会議"
+    public static let yes = "はい"
+    public static let no = "いいえ"
+    public static let deleteWarning = "警告を削除"
+    public static let deleteConfirmation = "本当にアイテムを削除しますか"
     public static let ok = "OK"
 }

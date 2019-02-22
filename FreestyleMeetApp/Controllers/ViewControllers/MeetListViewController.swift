@@ -78,10 +78,12 @@ class MeetListViewController: UIViewController, UITableViewDelegate, UITableView
     @objc private func deleteMeet(sender: UILongPressGestureRecognizer) {
         let touch = sender.location(in: tableView)
         if let indextPath = tableView.indexPathForRow(at: touch) {
-            let id = meets[indextPath.row].id
-            FirebaseHandler.getInstance().deleteMeet(id: id, callback: {
-                fetchMeets()
-            })
+            self.confirm(title: Strings.deleteWarning, message: Strings.deleteConfirmation) {
+                let id = self.meets[indextPath.row].id
+                FirebaseHandler.getInstance().deleteMeet(id: id, callback: {
+                    self.fetchMeets()
+                })
+            }
         }
     }
     
