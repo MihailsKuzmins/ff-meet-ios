@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import MapKit
 
-class MeetReadDetailViewController: UIViewController, MKMapViewDelegate {
+class MeetDetailReadViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
