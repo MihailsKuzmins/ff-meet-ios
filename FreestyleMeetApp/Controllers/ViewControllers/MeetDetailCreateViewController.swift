@@ -13,8 +13,14 @@ class MeetDetailCreateViewController: UIViewController, MKMapViewDelegate, UIGes
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initNavigationBar()
         initMap()
         initDatePicker()
+    }
+    
+    private func initNavigationBar() {
+        navigationController?.visibleViewController?.title = Strings.createNewMeet
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Strings.save, style: .done, target: self, action: #selector(saveButtonAction(_:)))
     }
     
     private func initMap() {
@@ -30,7 +36,7 @@ class MeetDetailCreateViewController: UIViewController, MKMapViewDelegate, UIGes
         datePicker.minimumDate = now
     }
     
-    @IBAction func saveButtonAction(_ sender: UIButton) {
+    @objc func saveButtonAction(_ sender: UIButton) {
         guard let name = nameTextField.text, let locationName = locationNameTextField.text,
             !name.isEmpty, !locationName.isEmpty else {
                 self.alert(title: Strings.error, message: Strings.notAllFieldsAreProvided)

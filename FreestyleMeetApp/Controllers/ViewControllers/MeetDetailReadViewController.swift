@@ -13,8 +13,10 @@ class MeetDetailReadViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mapView.delegate = self
-        
+        fetchMeet()
+    }
+
+    private func fetchMeet() {
         FirebaseHandler.getInstance().getMeet(id: id!, onSuccessCallback: { data in
             let latitude = data[CoreConstants.DbKeys.meetLatitude] as! CLLocationDegrees
             let longitude = data[CoreConstants.DbKeys.meetLongitude] as! CLLocationDegrees
@@ -29,13 +31,17 @@ class MeetDetailReadViewController: UIViewController, MKMapViewDelegate {
             self.alert(title: Strings.error, message: Strings.accessDenied)
         })
     }
-    
+
     private func initSelf(_ model: MeetModel) {
+        navigationController?.visibleViewController?.title = Strings.show
+        
         initMap(model)
         initLabels(model)
     }
     
     private func initMap(_ model: MeetModel) {
+         mapView.delegate = self
+        
         let startCoordinate = CLLocationCoordinate2D(latitude: model.latitude, longitude: model.longitude)
         let span = MKCoordinateSpan(latitudeDelta: zoomLevel, longitudeDelta: zoomLevel)
         let region = MKCoordinateRegion(center: startCoordinate, span: span)
