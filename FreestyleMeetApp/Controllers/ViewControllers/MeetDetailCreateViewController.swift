@@ -31,11 +31,20 @@ class MeetDetailCreateViewController: UIViewController, MKMapViewDelegate, UIGes
     }
     
     @IBAction func saveButtonAction(_ sender: UIButton) {
-        guard var name = nameTextField.text, let locationName = locationNameTextField.text,
-            !name.isEmpty, !locationName.isEmpty else {
+        guard var someName = nameTextField.text, let locationName = locationNameTextField.text,
+            !someName.isEmpty, !locationName.isEmpty else {
                 self.alert(title: Strings.error, message: Strings.notAllFieldsAreProvided)
                 return
         }
+        
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: datePicker.date)
+        
+        model.date = "\(dateComponents.year!)年\(dateComponents.month!)月\(dateComponents.day!)日"
+        model.time = "\(dateComponents.hour!):\(dateComponents.minute!)"
+        model.locationName = locationName
+        model.name = someName
+        
+        FirebaseHandler.getInstance().saveMeet(model: model)
     }
     
     @objc private func mapTappedAction(gestureReconizer: UILongPressGestureRecognizer) {

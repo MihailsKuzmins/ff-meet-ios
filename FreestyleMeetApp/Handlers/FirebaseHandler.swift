@@ -64,4 +64,16 @@ class FirebaseHandler {
             onErrorCallback()
         })
     }
+    
+    func saveMeet(model: MeetModel) {
+        let id = arc4random_uniform(UInt32.max)
+        
+        db.child(CoreConstants.DbKeys.meets).child(String(id)).setValue([
+            CoreConstants.DbKeys.meetDate: model.date,
+            CoreConstants.DbKeys.meetLatitude: model.latitude,
+            CoreConstants.DbKeys.meetLocationName: model.locationName,
+            CoreConstants.DbKeys.meetLongitude: model.longitude,
+            CoreConstants.DbKeys.meetName: model.name,
+            CoreConstants.DbKeys.meetTime: model.time])
+    }
 }
