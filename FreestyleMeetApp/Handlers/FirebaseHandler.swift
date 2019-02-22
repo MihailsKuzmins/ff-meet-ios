@@ -49,4 +49,19 @@ class FirebaseHandler {
             onErrorCallback()
         })
     }
+    
+    func getMeet(id: String, onSuccessCallback: @escaping ([String: Any]) -> Void, onErrorCallback: @escaping () -> Void) {
+        db.child(CoreConstants.DbKeys.meets).child(id).observeSingleEvent(of: .value, with: { snapshot in
+            let data = snapshot.value as? [String: Any]
+            if let data = data {
+                onSuccessCallback(data)
+                return
+            }
+            
+            onErrorCallback()
+        }, withCancel: { error in
+            print(error.localizedDescription)
+            onErrorCallback()
+        })
+    }
 }

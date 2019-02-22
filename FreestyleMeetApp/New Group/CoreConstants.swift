@@ -18,6 +18,7 @@ class CoreConstants {
     class DbKeys {
         public static let meets = "meets"
         public static let meetDate = "date"
+        public static let meetTime = "time"
         public static let meetLatitude = "latitude"
         public static let meetLocationName = "locationName"
         public static let meetLongitude = "longitude"

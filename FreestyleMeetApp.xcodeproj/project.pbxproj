@@ -26,6 +26,7 @@
 		3FEC140F221FE7A000220D42 /* AppStoryboardNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC140E221FE7A000220D42 /* AppStoryboardNavigationController.swift */; };
 		3FEC1412221FF36D00220D42 /* MeetReadDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC1411221FF36D00220D42 /* MeetReadDetailViewController.swift */; };
 		3FEC1414221FF3F100220D42 /* MeetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC1413221FF3F100220D42 /* MeetModel.swift */; };
+		3FEC14182220059D00220D42 /* MapViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC14172220059D00220D42 /* MapViewExtensions.swift */; };
 		ACE330354D86D7456B282D5C /* Pods_FreestyleMeetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C092F982255BAA6074B3C55 /* Pods_FreestyleMeetApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		3FEC140E221FE7A000220D42 /* AppStoryboardNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoryboardNavigationController.swift; sourceTree = "<group>"; };
 		3FEC1411221FF36D00220D42 /* MeetReadDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetReadDetailViewController.swift; sourceTree = "<group>"; };
 		3FEC1413221FF3F100220D42 /* MeetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetModel.swift; sourceTree = "<group>"; };
+		3FEC14172220059D00220D42 /* MapViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewExtensions.swift; sourceTree = "<group>"; };
 		48545B37B3F261A68D78F83A /* Pods-FreestyleMeetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreestyleMeetApp.release.xcconfig"; path = "Target Support Files/Pods-FreestyleMeetApp/Pods-FreestyleMeetApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 			children = (
 				3F7B8CA1221ED0A300A0CFAC /* UiViewExtensions.swift */,
 				3F7B8CA8221EDD2400A0CFAC /* UiViewControllerExtensions.swift */,
+				3FEC14172220059D00220D42 /* MapViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				3F7B8CA2221ED0A300A0CFAC /* UiViewExtensions.swift in Sources */,
 				3F7B8CA9221EDD2400A0CFAC /* UiViewControllerExtensions.swift in Sources */,
 				3F7B8CBB221EEB4D00A0CFAC /* CoreConstants.swift in Sources */,
+				3FEC14182220059D00220D42 /* MapViewExtensions.swift in Sources */,
 				3F9EFD6A221EB272003F488B /* ViewController.swift in Sources */,
 				3F7B8CC1221EF9F900A0CFAC /* MeetListModel.swift in Sources */,
 				3F7B8CB7221EE88800A0CFAC /* SegueHandler.swift in Sources */,

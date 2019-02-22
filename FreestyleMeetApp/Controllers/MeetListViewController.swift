@@ -50,8 +50,7 @@ class MeetListViewController: UIViewController, UITableViewDelegate, UITableView
             return
         case .editItem:
             let vc = segue.destination as! MeetReadDetailViewController
-            
-            
+            vc.id = (sender as! MeetListModel).id
             return
         }
     }
