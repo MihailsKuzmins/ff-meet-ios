@@ -1,9 +1,10 @@
 import Foundation
 import UIKit
 
-class MeetListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MeetListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SegueHandler {
     @IBOutlet weak var tableView: UITableView!
     private var meets: Array<MeetListModel>?
+    private var navController: AppStoryboardNavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,7 +12,8 @@ class MeetListViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         
-        meets = (self.navigationController as! AppStoryboardNavigationController).meets
+        navController = self.navigationController as? AppStoryboardNavigationController
+        meets = navController!.meets
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,5 +33,28 @@ class MeetListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CoreConstants.Ui.meetCellHeight
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "editItem", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifierCase = self.getIdentifierCase(for: segue) else {
+            assertionFailure("Could not map segue identifier for \(segue.identifier ?? "")")
+            return
+        }
+
+        switch identifierCase {
+        case .addItem:
+            return
+        case .editItem:
+            return
+        }
+    }
+    
+    enum Segue: String {
+        case addItem
+        case editItem
     }
 }
