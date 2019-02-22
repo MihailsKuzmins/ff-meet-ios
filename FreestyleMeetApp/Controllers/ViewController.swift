@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         
         FirebaseHandler.getInstance().authenticate(eMail: login, password: password, onSuccessCallback: {
             let storyboard = UIStoryboard(name: CoreConstants.Storyboards.appStoryboard, bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: CoreConstants.ViewControllers.meetList) as! MeetListViewController
+            let vc = storyboard.instantiateViewController(withIdentifier: CoreConstants.ViewControllers.appNavController) as! AppStoryboardNavigationController
             
             self.fetchMeets(vc)
         }, onErrorCallback: {
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         })
     }
     
-    private func fetchMeets(_ vc: MeetListViewController) {
+    private func fetchMeets(_ vc: AppStoryboardNavigationController) {
         FirebaseHandler.getInstance().getMeets(createItem: { x -> MeetListModel in
             let name = x[CoreConstants.DbKeys.meetName] as! String
             let locationName = x[CoreConstants.DbKeys.meetLocationName] as! String

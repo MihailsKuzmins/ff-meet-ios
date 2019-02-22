@@ -3,13 +3,15 @@ import UIKit
 
 class MeetListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-    public var meets: Array<MeetListModel>?
+    private var meets: Array<MeetListModel>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        meets = (self.navigationController as! AppStoryboardNavigationController).meets
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

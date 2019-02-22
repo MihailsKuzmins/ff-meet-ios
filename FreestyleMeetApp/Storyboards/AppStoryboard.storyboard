@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SBo-ba-tsf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gBN-tg-MNs">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="フリースタイル会議" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1y-pO-xd0">
-                                <rect key="frame" x="51" y="44" width="273" height="35"/>
+                                <rect key="frame" x="51" y="88" width="273" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="uNy-kr-T3g"/>
                                 </constraints>
@@ -102,11 +102,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nGV-Kk-YTO"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CG3-IO-CV2"/>
                     <connections>
                         <outlet property="tableView" destination="Zsk-hu-z1x" id="u66-41-FnB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QxL-tm-5Jm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.2" y="90.886699507389167"/>
+        </scene>
+        <!--App Storyboard Navigation Controller-->
+        <scene sceneID="i9y-QW-1Fv">
+            <objects>
+                <navigationController storyboardIdentifier="AppStoryboardNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="gBN-tg-MNs" customClass="AppStoryboardNavigationController" customModule="FreestyleMeetApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8pL-XB-fHB">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SBo-ba-tsf" kind="relationship" relationship="rootViewController" id="siS-qh-OCh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zM0-QI-agt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="88.799999999999997" y="90.886699507389167"/>
         </scene>

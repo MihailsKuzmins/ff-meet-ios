@@ -8,6 +8,7 @@ class CoreConstants {
     
     class ViewControllers {
         public static let meetList = "MeetListViewController"
+        public static let appNavController = "AppStoryboardNavigationController"
     }
     
     class CellIdentifiers {
