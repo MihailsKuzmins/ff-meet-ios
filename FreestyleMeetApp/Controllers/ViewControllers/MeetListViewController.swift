@@ -3,7 +3,7 @@ import UIKit
 
 class MeetListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SegueHandler {
     @IBOutlet weak var tableView: UITableView!
-    private var meets: Array<MeetListModel>?
+    private var meets: Array<MeetListModel> = []
     private var navController: AppStoryboardNavigationController?
     
     override func viewDidLoad() {
@@ -11,18 +11,19 @@ class MeetListViewController: UIViewController, UITableViewDelegate, UITableView
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        navController = self.navigationController as? AppStoryboardNavigationController
-        meets = navController!.meets
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        fetchMeets()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return meets!.count
+        return meets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CoreConstants.CellIdentifiers.MeetTableViewCell, for: indexPath) as! MeetTableViewCell
-        let model = meets![indexPath.row]
+        let model = meets[indexPath.row]
         
         cell.nameLabel.text = model.name
         cell.locationNameLabel.text = model.locationName
@@ -36,7 +37,7 @@ class MeetListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "editItem", sender: meets![indexPath.row])
+        performSegue(withIdentifier: "editItem", sender: meets[indexPath.row])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,6 +54,21 @@ class MeetListViewController: UIViewController, UITableViewDelegate, UITableView
             vc.id = (sender as! MeetListModel).id
             return
         }
+    }
+    
+    private func fetchMeets() {
+        FirebaseHandler.getInstance().getMeets(createItem: { (key, data) -> MeetListModel in
+            let name = data[CoreConstants.DbKeys.meetName] as! String
+            let locationName = data[CoreConstants.DbKeys.meetLocationName] as! String
+            let date = data[CoreConstants.DbKeys.meetDate] as! String
+            
+            return MeetListModel(id: key, name: name, locationName: locationName, date: date)
+        }, onSuccessCallback: { x in
+            self.meets = x
+            self.tableView.reloadData()
+        }, onErrorCallback: {
+            self.alert(title: Strings.error, message: Strings.accessDenied)
+        })
     }
     
     enum Segue: String {

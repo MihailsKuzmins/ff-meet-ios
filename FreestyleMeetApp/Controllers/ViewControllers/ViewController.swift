@@ -44,25 +44,9 @@ class ViewController: UIViewController {
         FirebaseHandler.getInstance().authenticate(eMail: login, password: password, onSuccessCallback: {
             let storyboard = UIStoryboard(name: CoreConstants.Storyboards.appStoryboard, bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: CoreConstants.ViewControllers.appNavController) as! AppStoryboardNavigationController
-            
-            self.fetchMeets(vc)
-        }, onErrorCallback: {
-            self.alert(title: Strings.error, message: Strings.cannotLogin)
-        })
-    }
-    
-    private func fetchMeets(_ vc: AppStoryboardNavigationController) {
-        FirebaseHandler.getInstance().getMeets(createItem: { (key, data) -> MeetListModel in
-            let name = data[CoreConstants.DbKeys.meetName] as! String
-            let locationName = data[CoreConstants.DbKeys.meetLocationName] as! String
-            let date = data[CoreConstants.DbKeys.meetDate] as! String
-            
-            return MeetListModel(id: key, name: name, locationName: locationName, date: date)
-        }, onSuccessCallback: { x in
-            vc.meets = x
             self.present(vc, animated: true, completion: nil)
         }, onErrorCallback: {
-            self.alert(title: Strings.error, message: Strings.accessDenied)
+            self.alert(title: Strings.error, message: Strings.cannotLogin)
         })
     }
 }
