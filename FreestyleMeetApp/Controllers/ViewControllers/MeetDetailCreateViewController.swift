@@ -44,7 +44,9 @@ class MeetDetailCreateViewController: UIViewController, MKMapViewDelegate, UIGes
         model.locationName = locationName
         model.name = name
         
-        FirebaseHandler.getInstance().saveMeet(model: model)
+        FirebaseHandler.getInstance().saveMeet(model: model, callback: {
+            navigationController?.popViewController(animated: true)
+        })
     }
     
     @objc private func mapTappedAction(gestureReconizer: UILongPressGestureRecognizer) {
