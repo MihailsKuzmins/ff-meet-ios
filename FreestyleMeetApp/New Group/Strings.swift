@@ -11,5 +11,6 @@ class Strings {
     public static let show = "見せる"
     public static let createNewMeet = "新しい出会いを追加"
     public static let save = "保存"
+    public static let meet = "会議"
     public static let ok = "OK"
 }

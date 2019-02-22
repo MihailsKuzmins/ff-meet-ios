@@ -64,7 +64,7 @@ class MeetDetailCreateViewController: UIViewController, MKMapViewDelegate, UIGes
         let latitude = coordinate.latitude
         let longitude = coordinate.longitude
         
-        mapView.addMapPin(latitude: latitude, longitude: longitude, title: "Aaa")
+        mapView.addMapPin(latitude: latitude, longitude: longitude, title: Strings.meet)
         model.latitude = latitude
         model.longitude = longitude
     }
