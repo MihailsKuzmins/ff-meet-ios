@@ -38,7 +38,8 @@ class MeetDetailCreateViewController: UIViewController, MKMapViewDelegate, UIGes
     
     @objc func saveButtonAction(_ sender: UIButton) {
         guard let name = nameTextField.text, let locationName = locationNameTextField.text,
-            !name.isEmpty, !locationName.isEmpty else {
+            !name.isEmpty, !locationName.isEmpty,
+            model.longitude != 0, model.latitude != 0 else {
                 self.alert(title: Strings.error, message: Strings.notAllFieldsAreProvided)
                 return
         }
