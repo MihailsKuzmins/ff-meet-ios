@@ -52,12 +52,12 @@ class ViewController: UIViewController {
     }
     
     private func fetchMeets(_ vc: AppStoryboardNavigationController) {
-        FirebaseHandler.getInstance().getMeets(createItem: { x -> MeetListModel in
-            let name = x[CoreConstants.DbKeys.meetName] as! String
-            let locationName = x[CoreConstants.DbKeys.meetLocationName] as! String
-            let date = x[CoreConstants.DbKeys.meetDate] as! String
+        FirebaseHandler.getInstance().getMeets(createItem: { (key, data) -> MeetListModel in
+            let name = data[CoreConstants.DbKeys.meetName] as! String
+            let locationName = data[CoreConstants.DbKeys.meetLocationName] as! String
+            let date = data[CoreConstants.DbKeys.meetDate] as! String
             
-            return MeetListModel(name: name, locationName: locationName, date: date)
+            return MeetListModel(id: key, name: name, locationName: locationName, date: date)
         }, onSuccessCallback: { x in
             vc.meets = x
             self.present(vc, animated: true, completion: nil)

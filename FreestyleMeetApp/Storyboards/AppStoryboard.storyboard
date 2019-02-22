@@ -124,10 +124,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rdm-zR-wX5">
+                                <rect key="frame" x="0.0" y="121" width="375" height="252"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="252" id="pKM-j6-1AL"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5ng-jg-4GJ" firstAttribute="top" secondItem="QPs-T4-P8f" secondAttribute="top" id="SzL-nJ-wht"/>
+                            <constraint firstItem="rdm-zR-wX5" firstAttribute="top" secondItem="5ng-jg-4GJ" secondAttribute="bottom" id="dNa-5N-zTb"/>
+                            <constraint firstItem="rdm-zR-wX5" firstAttribute="trailing" secondItem="QPs-T4-P8f" secondAttribute="trailing" id="e9s-3x-wPN"/>
+                            <constraint firstItem="rdm-zR-wX5" firstAttribute="leading" secondItem="QPs-T4-P8f" secondAttribute="leading" id="hnv-fj-fam"/>
                             <constraint firstItem="5ng-jg-4GJ" firstAttribute="leading" secondItem="QPs-T4-P8f" secondAttribute="leading" id="nZ0-Wm-s2k"/>
                             <constraint firstItem="5ng-jg-4GJ" firstAttribute="trailing" secondItem="QPs-T4-P8f" secondAttribute="trailing" id="qEN-Jj-2X0"/>
                         </constraints>

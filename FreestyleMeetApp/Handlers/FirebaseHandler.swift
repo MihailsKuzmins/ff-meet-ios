@@ -28,12 +28,14 @@ class FirebaseHandler {
         }
     }
     
-    func getMeets<T>(createItem: @escaping ([String: Any]) -> T, onSuccessCallback: @escaping ([T]) -> Void, onErrorCallback: @escaping () -> Void) {
+    func getMeets<T>(createItem: @escaping (String, [String: Any]) -> T, onSuccessCallback: @escaping ([T]) -> Void, onErrorCallback: @escaping () -> Void) {
         db.child(CoreConstants.DbKeys.meets).observeSingleEvent(of: .value, with: { snapshot in
             let values = snapshot.value as? NSDictionary
             let list = values?.compactMap({ (key, val) -> T in
+                let id = key as! String
                 let data = val as! Dictionary<String, Any>
-                return createItem(data)
+                
+                return createItem(id, data)
             })
             
             if let list = list {

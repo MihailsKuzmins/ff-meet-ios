@@ -36,7 +36,7 @@ class MeetListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "editItem", sender: self)
+        performSegue(withIdentifier: "editItem", sender: meets![indexPath.row])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -49,6 +49,9 @@ class MeetListViewController: UIViewController, UITableViewDelegate, UITableView
         case .addItem:
             return
         case .editItem:
+            let vc = segue.destination as! MeetReadDetailViewController
+            
+            
             return
         }
     }
