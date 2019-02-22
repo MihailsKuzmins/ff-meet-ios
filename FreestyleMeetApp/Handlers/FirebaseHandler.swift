@@ -78,4 +78,9 @@ class FirebaseHandler {
         
         callback()
     }
+    
+    func deleteMeet(id: String, callback: () -> Void) {
+        db.child(CoreConstants.DbKeys.meets).child(id).removeValue()
+        callback()
+    }
 }

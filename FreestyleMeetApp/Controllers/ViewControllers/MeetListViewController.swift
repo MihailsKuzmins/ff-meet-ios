@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class MeetListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SegueHandler {
+class MeetListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, SegueHandler {
     @IBOutlet weak var tableView: UITableView!
     private var meets: Array<MeetListModel> = []
     private var navController: AppStoryboardNavigationController?
@@ -24,6 +24,10 @@ class MeetListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CoreConstants.CellIdentifiers.MeetTableViewCell, for: indexPath) as! MeetTableViewCell
         let model = meets[indexPath.row]
+        
+        let gestureRecogniser = UILongPressGestureRecognizer(target: self, action: #selector(self.deleteMeet(sender:)))
+        gestureRecogniser.delegate = self
+        cell.addGestureRecognizer(gestureRecogniser)
         
         cell.nameLabel.text = model.name
         cell.locationNameLabel.text = model.locationName
@@ -69,6 +73,16 @@ class MeetListViewController: UIViewController, UITableViewDelegate, UITableView
         }, onErrorCallback: {
             self.alert(title: Strings.error, message: Strings.accessDenied)
         })
+    }
+    
+    @objc private func deleteMeet(sender: UILongPressGestureRecognizer) {
+        let touch = sender.location(in: tableView)
+        if let indextPath = tableView.indexPathForRow(at: touch) {
+            let id = meets[indextPath.row].id
+            FirebaseHandler.getInstance().deleteMeet(id: id, callback: {
+                fetchMeets()
+            })
+        }
     }
     
     enum Segue: String {
