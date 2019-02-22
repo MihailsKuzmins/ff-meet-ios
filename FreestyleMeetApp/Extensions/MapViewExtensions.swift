@@ -10,4 +10,8 @@ extension MKMapView {
         
         self.addAnnotation(pin)
     }
+    
+    func removeAllPins() {
+        self.removeAnnotations(self.annotations)
+    }
 }
