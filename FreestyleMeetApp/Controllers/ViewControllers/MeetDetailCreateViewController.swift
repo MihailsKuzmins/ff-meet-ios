@@ -31,8 +31,8 @@ class MeetDetailCreateViewController: UIViewController, MKMapViewDelegate, UIGes
     }
     
     @IBAction func saveButtonAction(_ sender: UIButton) {
-        guard var someName = nameTextField.text, let locationName = locationNameTextField.text,
-            !someName.isEmpty, !locationName.isEmpty else {
+        guard let name = nameTextField.text, let locationName = locationNameTextField.text,
+            !name.isEmpty, !locationName.isEmpty else {
                 self.alert(title: Strings.error, message: Strings.notAllFieldsAreProvided)
                 return
         }
@@ -42,7 +42,7 @@ class MeetDetailCreateViewController: UIViewController, MKMapViewDelegate, UIGes
         model.date = "\(dateComponents.year!)年\(dateComponents.month!)月\(dateComponents.day!)日"
         model.time = "\(dateComponents.hour!):\(dateComponents.minute!)"
         model.locationName = locationName
-        model.name = someName
+        model.name = name
         
         FirebaseHandler.getInstance().saveMeet(model: model)
     }
